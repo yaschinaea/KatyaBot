@@ -22,14 +22,11 @@ public class Main {
             br = new BufferedReader(fr);
             Scanner scanner = new Scanner(System.in);
             ArrayList<String> array = new ArrayList<>();
-            String line;
             Random rand = new Random();
 
+            System.out.println(br.readLine());
+
             String sCurrentLine;
-            sCurrentLine = br.readLine();
-            System.out.println(sCurrentLine);
-
-
             while ((sCurrentLine = br.readLine()) != null) {
                 array.add(sCurrentLine);
             }
@@ -52,6 +49,7 @@ public class Main {
 
                 if ("Start talking".equals(input)) {
                     talk = true;
+                    continue;
                 }
 
                 if(talk) {
@@ -62,9 +60,6 @@ public class Main {
             }
 
             scanner.close();
-
-
-
         } catch (IOException e) {
 
             e.printStackTrace();
